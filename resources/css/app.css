@@ -1,0 +1,39 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    width: calc((100px * 3) + (8px * 2));
+}
+
+.grid__cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #c0c0c0;
+    background: #fafafa;
+    cursor: pointer;
+}
+.grid__cell:hover,
+.grid__cell:focus {
+    background: #f0f0f0;
+}
+
+.sr-only {
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    left: -99999em;
+    user-select: none;
+    pointer-events: none;
+}
+
+.winner {
+    display: inline-block;
+    padding: 8px;
+    border: 2px solid green;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
